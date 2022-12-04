@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color-primary: hsl(25, 97%, 53%);
+  --color-neutral-800: hsl(216, 12%, 8%);
+  --color-neutral-600: hsl(213, 19%, 18%);
+  --color-neutral-400: hsl(216, 20%, 25%);
+  --color-neutral-200: hsl(217, 12%, 63%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--color-neutral-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+ol {
+  list-style: none;
+}
+
+.card {
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+  width: 340px;
+  border-radius: 1.5rem;
+  padding: 1.3rem;
+  background-color: var(--color-neutral-600);
+}
+
+.card__image {
+  margin-top: 1rem;
+}
+
+.aling-center {
+  text-align: center;
+}
+
+.result {
+  background-color: hsla(0, 0%, 100%, 0.075);
+  color: var(--color-primary);
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  width: max-content;
+  margin: 1.5rem auto 2em auto;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.star {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--color-neutral-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.card__title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--colo-white);
+}
+
+.card__description {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-neutral-200);
+  margin-bottom: 1.5rem;
+}
+
+.card__ratings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.ratings-item {
+  font-weight: 700;
+  color: var(--color-neutral-200);
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-neutral-400);
+  transition: 300ms ease-out;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  background-color: var(--color-neutral-200);
+  color: var(--color-white);
+}
+
+.ratings-item:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.card__button {
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  background-color: var(--color-primary);
+  border: none;
+  padding: 1.1rem 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+  border-radius: 2em;
+  transition: 300ms ease-out;
+}
+
+.card__button:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.alert-wrapper {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.alert {
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
+  width: max-content;
+  padding: 1em 2em;
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 700;
+  border-radius: 2em;
+}
